@@ -62,7 +62,7 @@ gulp.task('default', function() {
   console.log('I am the default task. Hear me roar');
 });
 ```
-([https://github.com/code-for-coffee/gulp_workflows/blob/master/gulpfile_lo3.js](Source))
+[https://github.com/code-for-coffee/gulp_workflows/blob/master/gulpfile_lo3.js](Source)
 
 In your terminal, run `gulp`. This will have the library look for a `default` task in your `gulpfile.js`. It will then execute the callback that you define for your task. The output will appear as follows:
 
