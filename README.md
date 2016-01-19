@@ -124,5 +124,32 @@ Run `gulp` in your terminal. Inspect the `build/build.js` file. *What do you see
 
 ##### Verifying that everything works
 
+Let's write some ES6. We'll then use **gulp** to run tasks that will create a file prepared for the client side. To verify everything works, we can run the script generated in the console.
+
+In my `app.js`, I want todefine an ES6 class called HelloWorld. The class should have a toString() method that returns 'Hello, world!'. I will then instantiate a new instance of the class and console log the `toString()` method that it contains. 
+
+```javascript
+// define an ES6 class called HelloWorld
+class HelloWorld {
+  // define a toString() method on the class
+  toString() {
+    return 'Hello, world!';
+  }
+}
+// instantiate a new instance of HelloWorld
+var sample = new HelloWorld();
+// console.log sample's toString() method
+console.log(sample.toString());
+```
+([Source](https://github.com/code-for-coffee/gulp_workflows/blob/master/app.js))
+
+Now, we should run `gulp` in the terminal. Upon completion, open the `build/build.js` file. It will contain a large amount of obfuscated code such as `(function e(t,n,r){function s(o,u)....`. Copy and paste this code into a browser's Javascript console. Inside the console, you should see `Hello, world!`. 
+
+##### Tips and Tricks
+
+* You will need to re-run the `gulp` command every time you make a change.
+* There is `nodemon` support for gulp.
+* You can have `gulp` **watch** files for changes using [gulp-watch](https://www.npmjs.com/package/gulp-watch).
+
 
 
