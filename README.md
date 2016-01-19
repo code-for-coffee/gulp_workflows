@@ -94,3 +94,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 ```
+
+We're all set with our dependencies. Now, it is time to create a file structure for our project. We should create a folder called `source` for our actual Javascript application. We'll create an `app.js` in that source directory. We should also create a `build` folder to contain our final, production-ready Javascript file. 
+
+`touch source/.gitkeep build/.gitkeep source/app.js`
