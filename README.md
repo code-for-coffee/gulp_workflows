@@ -99,3 +99,30 @@ var source = require('vinyl-source-stream');
 We're all set with our dependencies. Now, it is time to create a file structure for our project. We should create a folder called `source` for our actual Javascript application. We'll create an `app.js` in that source directory. We should also create a `build` folder to contain our final, production-ready Javascript file. 
 
 `touch source/.gitkeep build/.gitkeep source/app.js`
+
+You'll notice that there is currently no file inside of our `build` directory other than a `.gitkeep`. We should define a task that will use the installed modules to transform our code and make it usable on the front-end. We should update our `gulpfile.js`'s **default** task.
+
+```javascript
+gulp.task('default', function() {
+  return browserify('./source/app.js')
+        .transform("babelify", {presets: ["es2015", "react"]})
+        .bundle()
+        .pipe(source('build.js'))
+        .pipe(gulp.dest('./build/'))
+});
+```
+
+Let's identify what is going on inside of our **default** task: 
+* The task uses **browserify** to include our modules that are required in our `source/app.js` file.
+* It then transforms any ES6 (ES2015) and React JSX templates into usable code on the client side. This usually translates our modern Javascript code into ES5 that most current evergreen browsers support.
+* The task then bundles our files together.
+* Next, the task creates a file called `build.js`.
+* Gulp finally places the `build.js` inside of a destination (`dest`) folder of `build/`.
+* [The full version of this Gulpfile.js may be found here](gulpfile_lo4.js).
+
+Run `gulp` in your terminal. Inspect the `build/build.js` file. *What do you see?*
+
+##### Verifying that everything works
+
+
+
