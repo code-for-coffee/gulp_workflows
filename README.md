@@ -6,4 +6,9 @@
 
 ## Introducing: Gulp
 
-* 
+* Gulp is a software built on Node.
+* It runs **tasks** that manipulate files on your system.
+* It is an active, open-source project.
+* There are many community-built plugins built to work directly with gulp.
+* It is commonly used for bundling, minificiation, and ES6 support.
+* **Grunt** is a popular alternative to Gulp.
