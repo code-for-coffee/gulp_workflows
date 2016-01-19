@@ -81,8 +81,11 @@ We're going to include a few external modules to create a Gulp workflow. Our wor
 * Support ES6 (ES2016) and JSX (for React.js) using **Babelify** (and a few Babel plugins).
 * Compile individual modules together using **vinyl-source-stream**.
 
-We need to install a variety of modules. They include:
-* 
+We need to install a variety of modules. The installation commands are:
+* `npm install --save-dev browserify`
+* `npm install --save-dev babel-preset-es2015 babel-preset-react`
+* `npm install --save-dev vinyl-source-stream`
+
 We can then add our modules to our `gulpfile.js`:
 
 ```javascript
