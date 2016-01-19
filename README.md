@@ -118,7 +118,7 @@ Let's identify what is going on inside of our **default** task:
 * The task then bundles our files together.
 * Next, the task creates a file called `build.js`.
 * Gulp finally places the `build.js` inside of a destination (`dest`) folder of `build/`.
-* [The full version of this Gulpfile.js may be found here](gulpfile_lo4.js).
+* [The full version of this Gulpfile.js may be found here](https://github.com/code-for-coffee/gulp_workflows/blob/master/gulfpile_lo4.js).
 
 Run `gulp` in your terminal. Inspect the `build/build.js` file. *What do you see?*
 
