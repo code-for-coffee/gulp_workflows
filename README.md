@@ -74,3 +74,20 @@ Finished 'default' after 144 μs
 
 
 #### Project: A Gulp Workflow that supports ES6 and Modules for the Web
+
+We're going to include a few external modules to create a Gulp workflow. Our workflow will support:
+
+* Node-style `require()` statements using **Browserify**.
+* Support ES6 (ES2016) and JSX (for React.js) using **Babelify** (and a few Babel plugins).
+* Compile individual modules together using **vinyl-source-stream**.
+
+We need to install a variety of modules. They include:
+* 
+We can then add our modules to our `gulpfile.js`:
+
+```javascript
+var gulp = require('gulp');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
+```
